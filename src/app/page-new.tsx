@@ -1,13 +1,15 @@
 import Link from "next/link";
-import { ArrowRight, Brain, Activity, Calendar, MessageCircle, Shield } from "lucide-react";
-import { MaDRIALogo } from "@/components/MaDRIALogo";
+import { ArrowRight, Heart, Brain, Activity, Calendar, MessageCircle, Shield } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       {/* Header */}
       <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm">
-        <MaDRIALogo size="sm" textSize="md" />
+        <div className="flex items-center space-x-2">
+          <Heart className="h-8 w-8 text-red-500" />
+          <span className="text-xl font-bold text-gray-900">Saúde 24h</span>
+        </div>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link
             className="text-sm font-medium hover:text-blue-600 transition-colors"
@@ -29,10 +31,10 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
-              Seu Assistente de IA Médica Digital
+              Seu Assistente de Saúde Digital 24h
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              MaDRIA transforma seus dados clínicos em ações práticas. Acompanhamento personalizado, 
+              Transforme seus dados clínicos em ações práticas. Acompanhamento personalizado, 
               planos inteligentes e orientação constante para alcançar seus objetivos de saúde.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
@@ -147,9 +149,12 @@ export default function Home() {
       <footer className="px-4 py-8 bg-gray-900 text-white">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <MaDRIALogo size="sm" textSize="sm" className="mb-4 md:mb-0" />
+            <div className="flex items-center space-x-2 mb-4 md:mb-0">
+              <Heart className="h-6 w-6 text-red-500" />
+              <span className="font-semibold">Saúde 24h</span>
+            </div>
             <div className="text-sm text-gray-400">
-              © 2025 MaDRIA - Medical AI Digital Assistant. Dados protegidos por criptografia.
+              © 2025 Assistente de Saúde 24h. Dados protegidos por criptografia.
             </div>
           </div>
         </div>
